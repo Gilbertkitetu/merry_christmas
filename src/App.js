@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Button, Navbar, Container, Carousel } from "react-bootstrap"
+import {Button, Navbar, Container, Carousel, Card, Form, Row } from "react-bootstrap"
 
 function App() {
   return (
@@ -57,7 +57,33 @@ function App() {
 </Carousel>
 
 
+<Card w-100>
+  <Card.Img variant="top" src="https://i.pinimg.com/564x/f1/cf/f3/f1cff3becb9241eaff3f68b2dd62b3a4.jpg" />
+  <Card.Body>
+    <Card.Title>You can also Share the love</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
 
+
+    <Form>
+  <Row className="mb-3">
+    <Form.Group>
+      <Form.Label>Your Name</Form.Label>
+      <Form.Control type="text" placeholder="Enter the name you want your friends to see." />
+    </Form.Group>
+
+    <Button variant="primary" type="submit">
+    Submit
+  </Button>
+  </Row>
+  </Form>
+
+  </Card.Body>
+
+  
+</Card>
 
     </div>
   );

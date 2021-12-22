@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import {Button, Navbar, Container, Carousel, Card, Form, Row } from "react-bootstrap"
-//import { Route, useParams, useNavigate } from "react-router-dom";
+import {Navbar, Container, Carousel, Card, Form, Row } from "react-bootstrap"
 
-//import {auth, signInWithGoogle } from './firebase';
-//import { collection, getDocs } from "firebase/firestore"
-//import "firebase/database";
 
 function App() {
-
-  
-
-  const [name, setName] = useState('');
-
-  //const [user, setUser] = useState(null);
-
-
-  // const navigate = useNavigate();
 
   var  randomQuote = [
     "Wishing you and your family a wonderful Christmas and a blessed New Year!",
@@ -27,12 +14,7 @@ function App() {
   ];
 
   var quote = randomQuote[Math.floor(Math.random()*randomQuote.length)];
-
-  const handleOnChange = (e) => {
-    setName(e.target.value);
-    
-  };
-
+  
   return (
     <div className="App">
 
@@ -58,7 +40,7 @@ function App() {
     />
     <Carousel.Caption>
       <h5>Merry Christmas</h5>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <p>{quote}</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -80,7 +62,7 @@ function App() {
     />
     <Carousel.Caption>
       <h5>Merry Christmas</h5>
-      <p></p>
+      <p>{quote}</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -98,9 +80,7 @@ function App() {
     <Form>
   <Row className="mb-3">
     <Form.Group>
-      {/* <Form.Label>Your Name</Form.Label>
-      <Form.Control type="text" placeholder="Enter the name you want your friends to see." 
-      onChange={handleOnChange} value={name}/> */}
+      
     </Form.Group>
 
     

@@ -3,3 +3,27 @@
   background-color: rgb(255, 255, 255);
 }
 
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+h5{
+  color: green;
+  font-style: bold;
+  font-size: 40px;
+}
+p{
+  color: green;
+}

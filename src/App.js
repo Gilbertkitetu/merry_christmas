@@ -1,11 +1,40 @@
-
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {Button, Navbar, Container, Carousel, Card, Form, Row } from "react-bootstrap"
+//import { Route, useParams, useNavigate } from "react-router-dom";
+
+//import {auth, signInWithGoogle } from './firebase';
+//import { collection, getDocs } from "firebase/firestore"
+//import "firebase/database";
 
 function App() {
+
+  
+
+  const [name, setName] = useState('');
+
+  //const [user, setUser] = useState(null);
+
+
+  // const navigate = useNavigate();
+
+  var  randomQuote = [
+    "Wishing you and your family a wonderful Christmas and a blessed New Year!",
+    "Merry Christmas! And best wishes for 2022.",
+    "Wishing you a joyous Christmas and a prosperous New Year.",
+    "Merry Christmas! With many good wishes for the holiday season and the coming year.",
+    "May the peace and joy of Christmas be with you today and throughout the New Year."
+  ];
+
+  var quote = randomQuote[Math.floor(Math.random()*randomQuote.length)];
+
+  const handleOnChange = (e) => {
+    setName(e.target.value);
+    
+  };
+
   return (
     <div className="App">
-      
 
       <Navbar>
       <Container>
@@ -13,7 +42,7 @@ function App() {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a>You</a>
+            <a>Breathtaking User</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
@@ -40,7 +69,7 @@ function App() {
     />
     <Carousel.Caption>
       <h5>Merry Christmas</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>{quote}</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -51,7 +80,7 @@ function App() {
     />
     <Carousel.Caption>
       <h5>Merry Christmas</h5>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <p></p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -60,29 +89,42 @@ function App() {
 <Card w-100>
   <Card.Img variant="top" src="https://i.pinimg.com/564x/f1/cf/f3/f1cff3becb9241eaff3f68b2dd62b3a4.jpg" />
   <Card.Body>
-    <Card.Title>You can also Share the love</Card.Title>
+    <Card.Title></Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+     
     </Card.Text>
 
 
     <Form>
   <Row className="mb-3">
     <Form.Group>
-      <Form.Label>Your Name</Form.Label>
-      <Form.Control type="text" placeholder="Enter the name you want your friends to see." />
+      {/* <Form.Label>Your Name</Form.Label>
+      <Form.Control type="text" placeholder="Enter the name you want your friends to see." 
+      onChange={handleOnChange} value={name}/> */}
     </Form.Group>
 
-    <Button variant="primary" type="submit">
-    Submit
-  </Button>
+    
   </Row>
   </Form>
 
   </Card.Body>
 
   
+</Card>
+
+
+
+
+<Card className="text-center">
+  <Card.Header>...</Card.Header>
+  <Card.Body>
+  
+  </Card.Body>
+  <Card.Footer className="text-muted">
+  <a href="https://github.com/Gilbertkitetu" className="fa fa-github"></a>
+  <a href="https://twitter.com/Gilbertkitetu1" className="fa fa-twitter"></a>
+  <a href="https://www.instagram.com/gilbertkitetu/" className="fa fa-instagram"></a>
+  </Card.Footer>
 </Card>
 
     </div>
